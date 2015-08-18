@@ -42,8 +42,29 @@ body,
 .bg-blue { background-color: #576eff; }
 .bg-green { background-color: #53ff9b; }
 
+.pagination {
+    position: fixed;
+    right: 30px;
+    width: 50px;
+    padding: 10px 5px;
 
+    -webkit-border-radius   : 25px;
+    -moz-border-radius      : 25px;
+    border-radius           : 25px;
 
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pagination li {
+    width: 20px;
+    height: 20px;
+
+    -webkit-border-radius   : 50%;
+    -moz-border-radius      : 50%;
+    border-radius           : 50%;
+
+    background-color: rgba(255, 255, 255, 0.7);
+}
 
 
 

@@ -36,6 +36,13 @@ body,
     width: 100%;
     height: 100%;
 }
+body { overflow: hidden; }
+
+#page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 .bg-red { background-color: #ff3e60; }
 .bg-yellow { background-color: #ffe34b; }
@@ -44,9 +51,14 @@ body,
 
 .pagination {
     position: fixed;
-    right: 30px;
-    width: 50px;
-    padding: 10px 5px;
+    top: 0;
+    bottom: 0;
+    right: 25px;
+    width: 14px;
+    z-index: 1;
+
+    margin: auto;
+    padding: 12px 10px;
 
     -webkit-border-radius   : 25px;
     -moz-border-radius      : 25px;
@@ -56,15 +68,22 @@ body,
 }
 
 .pagination li {
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
+    margin: 12px 0;
 
     -webkit-border-radius   : 50%;
     -moz-border-radius      : 50%;
     border-radius           : 50%;
 
-    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
 }
+
+.pagination .active {
+    background-color: #FFFFFF;
+}
+
 
 
 

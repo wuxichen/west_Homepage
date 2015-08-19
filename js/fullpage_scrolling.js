@@ -160,7 +160,7 @@
 
         } else {
 
-            container.animation(slideOptions, noAnimation ? 0 : options.duration);
+            container.animate(slideOptions, noAnimation ? 0 : options.duration);
         }
 
         setTimeout(function() {

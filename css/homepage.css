@@ -92,11 +92,37 @@ body { overflow: hidden; }
     right: 0;
 
     width: 1000px;
-    min-height: 500px;
-    height: 500px\9;
+    height: 560px;
     margin: auto;
+    padding: 1px;
 
     background-color: white;
+    color: #333;
+}
+
+.info-container {
+    magin: 60px;
+}
+
+.info-container h2,
+.skill-container h2 {
+
+}
+
+.info-container p {
+
+}
+
+.info-icon {
+
+}
+
+.skill-container {
+
+}
+
+.skills {
+
 }
 
 

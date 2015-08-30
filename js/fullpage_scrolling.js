@@ -121,7 +121,7 @@
      * @param noAnimation 是否不采用动画
      */
     function slideToPage(previousPage, pageNo, noAnimation) {
-        pageIndex = pageNo || pageIndex;
+        pageIndex = pageNo === undefined? pageIndex : pageNo;
         var destTop = -sections.eq(pageIndex).position().top;
         var transitionProp = ['-webkit-transition', '-moz-transition', '-o-transition', '-ms-transition', 'transition'];
         var slideOptions = {

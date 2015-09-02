@@ -1,0 +1,331 @@
+@charset "utf-8";
+
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input { margin: 0; padding: 0; }
+body { font-size: 12px; }
+img { border: none; }
+li { list-style: none; }
+input, select, textarea { outline: none; }
+textarea { resize: none; }
+a { text-decoration: none; }
+
+.clearfix {
+    display: block;
+    zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+    clear: both;
+    content: "";
+}
+
+.display-none {
+    display: none !important;;
+}
+
+.fl { float: left; }
+.fr { float: right; }
+
+/* =================================================== */
+
+@font-face {
+    font-family: 'office';
+    src: url('../font/office.eot?36564043');
+    src: url('../font/office.eot?36564043#iefix') format('embedded-opentype'),
+    url('../font/office.woff?36564043') format('woff'),
+    url('../font/office.ttf?36564043') format('truetype'),
+    url('../font/office.svg?36564043#office') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body,
+#page-container,
+.page-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+body { overflow: hidden; }
+
+#page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font: normal 14px/1.5 "Meiryo UI","Helvetica Neue", Helvetica, Arial, "微软雅黑", "Microsoft YaHei";
+}
+
+.bg-red { background-color: #ff3e60; }
+.bg-yellow { background-color: #ffe34b; }
+.bg-blue { background-color: #576eff; }
+.bg-green { background-color: #53ff9b; }
+
+.pagination {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 25px;
+    width: 14px;
+    z-index: 1;
+
+    margin: auto;
+    padding: 12px 10px;
+
+    -webkit-border-radius   : 25px;
+    -moz-border-radius      : 25px;
+    border-radius           : 25px;
+
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pagination li {
+    width: 14px;
+    height: 14px;
+    margin: 12px 0;
+
+    -webkit-border-radius   : 50%;
+    -moz-border-radius      : 50%;
+    border-radius           : 50%;
+
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.pagination .active {
+    background-color: #FFFFFF;
+}
+
+.content-container {
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+
+    width: 1000px;
+    height: 560px;
+    margin: auto;
+    padding: 1px;
+
+    background-color: white;
+    color: #333;
+}
+
+/*第一页 个人信息*/
+.info-container {
+    margin: 50px 100px 0 90px;
+}
+
+.info-container h2,
+.skill-container h2 {
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.info-container p {
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.info-photo {
+    float: right;
+    width: 220px;
+    height: 220px;
+    margin-top: -15px;
+
+    -webkit-border-radius   : 50%;
+    -moz-border-radius      : 50%;
+    border-radius           : 50%;
+}
+
+.info-icon {
+    display: inline-block;
+    width: 36px;
+    margin-right: 10px;
+
+    font-size: 28px;
+    line-height: 36px;
+    vertical-align: middle;
+
+    color: #666;
+}
+
+.icon-list {
+    float: left;
+    height: auto;
+    margin: 10px 10px 0 0;
+}
+
+.icon-list a {
+    height: auto;
+    font-size: 40px;
+    color: #ff3e60;
+}
+
+.iconmoon:before {
+    font-family: "office";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    margin-left: 5px;
+
+    display: inline-block;
+    text-decoration: inherit;
+    font-variant: normal;
+    text-transform: none;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weibo:before { content: '\e800'; }
+.icon-user:before { content: '\e801';}
+.icon-wechat:before { content: '\e802'; font-size: 36px;}
+.icon-linkedin-squared:before { content: '\e803'; }
+.icon-mail-alt:before { content: '\e804'; font-size: 26px;}
+.icon-graduation-cap:before { content: '\e805'; margin-left: 0; }
+.icon-github-circled:before { content: '\e806'; }
+.icon-blogger-rect:before { content: '\e807'; font-size: .9em;}
+
+@skillsWidth: 818px;
+@skillsHeight: 130px;
+
+.skill-container {
+    margin: 25px 90px auto;
+}
+
+.skills {
+    position: relative;
+    height: @skillsHeight;
+    border: 1px solid #ff3e60;
+
+    line-height: 0.9;
+}
+
+.small-font { font-size: 22px; }
+.medium-font { font-size: 28px; }
+.large-font { font-size: 36px; }
+
+@jqueryTop: 25px;
+@jqueryLeft: 100px;
+.jquery {
+    position: absolute;
+    top: percentage(@jqueryTop/@skillsHeight);
+    left: percentage(@jqueryLeft/@skillsWidth);
+}
+
+@lessTop: 50px;
+@lessLeft: 20px;
+.less {
+    position: absolute;
+    top: percentage(@lessTop/@skillsHeight);
+    left: percentage(@lessLeft/@skillsWidth);
+}
+
+@gruntTop: 96px;
+@gruntLeft: 40px;
+.grunt {
+    position: absolute;
+    top: percentage(@gruntTop/@skillsHeight);
+    left: percentage(@gruntLeft/@skillsWidth);
+}
+
+@cssTop: 82px;
+@cssLeft: 132px;
+.css {
+    position: absolute;
+    top: percentage(@cssTop/@skillsHeight);
+    left: percentage(@cssLeft/@skillsWidth);
+}
+
+@canvasTop: 60px;
+@canvasLeft: 216px;
+.canvas {
+    position: absolute;
+    top: percentage(@canvasTop/@skillsHeight);
+    left: percentage(@canvasLeft/@skillsWidth);
+}
+
+@javascriptTop: 11px;
+@javascriptLeft: 260px;
+.javascript {
+    position: absolute;
+    top: percentage(@javascriptTop/@skillsHeight);
+    left: percentage(@javascriptLeft/@skillsWidth);
+}
+
+@html5Top: 88px;
+@html5Left: 286px;
+.html5 {
+    position: absolute;
+    top: percentage(@html5Top/@skillsHeight);
+    left: percentage(@html5Left/@skillsWidth);
+}
+
+@css3Top: 63px;
+@css3Left: 380px;
+.css3 {
+    position: absolute;
+    top: percentage(@css3Top/@skillsHeight);
+    left: percentage(@css3Left/@skillsWidth);
+}
+
+@gitTop: 30px;
+@gitLeft: 474px;
+.git {
+    position: absolute;
+    top: percentage(@gitTop/@skillsHeight);
+    left: percentage(@gitLeft/@skillsWidth);
+}
+
+@angularjsTop: 86px;
+@angularjsLeft: 458px;
+.angularjs {
+    position: absolute;
+    top: percentage(@angularjsTop/@skillsHeight);
+    left: percentage(@angularjsLeft/@skillsWidth);
+}
+
+@htmlTop: 37px;
+@htmlLeft: 544px;
+.html {
+    position: absolute;
+    top: percentage(@htmlTop/@skillsHeight);
+    left: percentage(@htmlLeft/@skillsWidth);
+}
+
+@zeptoTop: 18px;
+@zeptoLeft: 650px;
+.zepto {
+    position: absolute;
+    top: percentage(@zeptoTop/@skillsHeight);
+    left: percentage(@zeptoLeft/@skillsWidth);
+}
+
+@bootstrapTop: 55px;
+@bootstrapLeft: 687px;
+.bootstrap {
+    position: absolute;
+    top: percentage(@bootstrapTop/@skillsHeight);
+    left: percentage(@bootstrapLeft/@skillsWidth);
+}
+
+@svnTop: 90px;
+@svnLeft: 734px;
+.svn {
+    position: absolute;
+    top: percentage(@svnTop/@skillsHeight);
+    left: percentage(@svnLeft/@skillsWidth);
+}
+
+@phpTop: 83px;
+@phpLeft: 635px;
+.php {
+    position: absolute;
+    top: percentage(@phpTop/@skillsHeight);
+    left: percentage(@phpLeft/@skillsWidth);
+}

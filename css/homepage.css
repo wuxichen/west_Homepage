@@ -137,7 +137,7 @@ body {
   width: 1000px;
   height: 560px;
   margin: auto;
-  padding: 1px;
+  padding: 1px 0;
   background-color: white;
   color: #333;
 }
@@ -315,4 +315,110 @@ body {
   position: absolute;
   top: 63.84615385%;
   left: 77.62836186%;
+}
+/* ---------- 第二页 ----------- */
+.project-left,
+.project-right {
+  position: relative;
+  float: left;
+  width: 400px;
+  height: 100%;
+  padding: 1px 50px;
+  font-size: 18px;
+  color: #333;
+}
+.page-title {
+  width: 163px;
+  margin: 38px 0 20px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.1em;
+  border-bottom: 5px solid #333;
+}
+.project-left .project-block {
+  text-align: right;
+}
+.project-right .project-block {
+  text-align: left;
+}
+.project-block {
+  position: relative;
+  margin-top: 30px;
+  padding: 10px 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  background-color: #ffe34b;
+}
+.project-right .project-block {
+  margin-top: 140px;
+}
+.project-block h3 {
+  margin-top: 5px;
+  font-size: 24px;
+  line-height: 1.2em;
+}
+.project-block .date {
+  margin: 0;
+  color: #CBCBCB;
+}
+.project-block p {
+  margin-top: 10px;
+}
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+}
+.large-circle {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: rgba(255, 227, 75, 0.45);
+}
+.small-circle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  margin: auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #ffe34b;
+}
+.project-left .triangle {
+  top: 45px;
+  right: -20px;
+  border-left-color: #ffe34b;
+}
+.project-right .triangle {
+  bottom: 45px;
+  left: -20px;
+  border-right-color: #ffe34b;
+}
+.project-left .large-circle {
+  top: 42px;
+  right: -38px;
+}
+.project-right .large-circle {
+  bottom: 42px;
+  left: -38px;
+}
+.project-separator {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: -1px;
+  width: 2px;
+  background-color: #ffe34b;
 }

@@ -113,6 +113,7 @@ body {
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
+  background-color: #000000;
   background-color: rgba(0, 0, 0, 0.4);
 }
 .pagination li {
@@ -123,6 +124,7 @@ body {
   -moz-border-radius: 50%;
   border-radius: 50%;
   cursor: pointer;
+  background-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.5);
 }
 .pagination .active {
@@ -138,7 +140,7 @@ body {
   height: 560px;
   margin: auto;
   padding: 1px 0;
-  color: #dac6cb;
+  color: #ffffff;
 }
 /*第一页 个人信息*/
 .info-container {
@@ -162,6 +164,7 @@ body {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+  border: 8px solid rgba(219, 198, 203, 0.6);
 }
 .info-icon {
   display: inline-block;
@@ -170,7 +173,7 @@ body {
   font-size: 28px;
   line-height: 36px;
   vertical-align: middle;
-  color: #666;
+  color: #dbc6cb;
 }
 .icon-list {
   float: left;
@@ -180,7 +183,11 @@ body {
 .icon-list a {
   height: auto;
   font-size: 40px;
-  color: #ff3e60;
+  color: #101647;
+  color: rgba(16, 22, 71, 0.8);
+}
+.icon-list a:hover {
+  color: #dbc6cb;
 }
 .iconmoon:before {
   font-family: "office";
@@ -232,7 +239,6 @@ body {
 .skills {
   position: relative;
   height: 130px;
-  border: 1px solid #ff3e60;
   line-height: 0.9;
   font-family: "Meiryo UI", "Segoe UI", "Helvetica Neue", Helvetica, "Microsoft YaHei", "微软雅黑", Arial;
 }
@@ -331,25 +337,26 @@ body {
   width: 400px;
   height: 100%;
   font-size: 18px;
-  color: #333;
+  color: #5d5959;
 }
 .page-title {
   margin: 38px 0 20px;
   font-size: 40px;
   font-weight: bold;
   line-height: 1.1em;
+  color: #ffffff;
 }
 .title-border-bottom {
   display: inline-block;
   text-align: center;
-  border-bottom: 5px solid #333;
+  border-bottom: 5px solid #ffffff;
 }
 .page-title em {
   margin-left: 130px;
   font-size: 22px;
   font-weight: normal;
   font-style: normal;
-  color: #666666;
+  color: #5d5959;
 }
 .project-left .project-block {
   text-align: right;
@@ -364,8 +371,8 @@ body {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  color: #FFFFFF;
-  background-color: #ffe34b;
+  color: #77dcba;
+  background-color: #ffffff;
 }
 .project-right .project-block {
   margin-top: 140px;
@@ -377,7 +384,7 @@ body {
 }
 .project-block .date {
   margin: 0;
-  color: #CBCBCB;
+  color: #dbc6cb;
 }
 .project-block p,
 .text p {
@@ -396,7 +403,8 @@ body {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  background-color: rgba(255, 227, 75, 0.45);
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.45);
 }
 .small-circle {
   position: absolute;
@@ -410,17 +418,17 @@ body {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  background-color: #ffe34b;
+  background-color: #ffffff;
 }
 .project-left .triangle {
   top: 45px;
   right: -20px;
-  border-left-color: #ffe34b;
+  border-left-color: #ffffff;
 }
 .project-right .triangle {
   bottom: 45px;
   left: -20px;
-  border-right-color: #ffe34b;
+  border-right-color: #ffffff;
 }
 .project-left .large-circle {
   top: 42px;
@@ -436,7 +444,7 @@ body {
   bottom: 10%;
   right: -1px;
   width: 2px;
-  background-color: #ffe34b;
+  background-color: #ffffff;
 }
 /* -------- 第三页 --------*/
 .intern-block-container {
@@ -449,8 +457,8 @@ body {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
-  color: #333333;
-  background-color: #576eff;
+  border: 5px solid #ffffff;
+  background-color: #ffffff;
   cursor: pointer;
 }
 .intern-block-wrapper {
@@ -463,17 +471,13 @@ body {
 .intern-separator {
   height: 2px;
   margin: 0 30px;
-  background-color: #576eff;
+  background-color: #ffffff;
 }
 .intern-block-wrapper .large-circle {
   bottom: -43px;
   left: 0;
   right: 0;
   margin: auto;
-  background-color: rgba(87, 110, 255, 0.45);
-}
-.intern-block-wrapper .small-circle {
-  background-color: #576eff;
 }
 .intern-block .picture {
   width: 100%;
@@ -484,7 +488,8 @@ body {
 }
 .intern-block .text {
   padding: 15px;
-  color: #FFFFFF;
+  font-size: 15px;
+  color: #e9d07d;
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
@@ -495,34 +500,33 @@ body {
   margin-bottom: 15px;
   font-size: 24px;
   line-height: 1.2em;
+  color: #f6dc85;
 }
 .enter {
   margin-top: 10px;
-  color: aqua;
+  color: #384c76;
   text-align: right;
   text-decoration: underline;
 }
 /* -------- 第四页 ------- */
-.bg-opensource .project-block,
-.bg-opensource .project-separator,
-.bg-opensource .small-circle {
-  background-color: #53ff9b;
-}
 .bg-opensource .project-left .triangle {
   top: 65px;
-  border-left-color: #53ff9b;
 }
 .bg-opensource .project-right .triangle {
   bottom: 65px;
-  border-right-color: #53ff9b;
 }
 .bg-opensource .large-circle {
   top: 62px;
-  background-color: rgba(83, 255, 155, 0.45);
 }
 .bg-opensource .project-right .large-circle {
   top: auto;
   bottom: 62px;
+}
+.bg-opensource .project-block {
+  color: #65aee1;
+}
+.bg-opensource .page-title em {
+  color: #dbc6cb;
 }
 .bg-opensource .project-left,
 .bg-opensource .project-right {
@@ -538,7 +542,7 @@ body {
 }
 .download-cv:before {
   margin-right: 7px;
-  font-size: 0.8em;
+  font-size: 0.9em;
   vertical-align: middle;
 }
 .download-cv {

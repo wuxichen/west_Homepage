@@ -30,6 +30,16 @@ a { text-decoration: none; }
 .fr { float: right; }
 
 /* =================================================== */
+@mainColorRed: #e65e68;
+@mainColorGreen: #77dcba;
+@mainColorYellow: #f6dc85;
+@mainColorBlue: #65aee1;
+@strongColorDeepBlue: #101647;
+@strongColorBlue: #384c76;
+@strongColorGray: #5d5959;
+@fontColor: #FFFFFF;
+@bgColor: #dbc6cb;
+
 
 @font-face {
     font-family: 'office';
@@ -59,10 +69,10 @@ body { overflow: hidden; }
     font: normal 14px/1.5 "Segoe UI", "Helvetica Neue", Helvetica, "Microsoft YaHei", "微软雅黑", Arial;
 }
 
-.bg-info { background-color: #e65e68; }
-.bg-project { background-color: #77dcba; }
-.bg-intern { background-color: #f6dc85; }
-.bg-opensource { background-color: #65aee1; }
+.bg-info { background-color: @mainColorRed; }
+.bg-project { background-color: @mainColorGreen; }
+.bg-intern { background-color: @mainColorYellow ; }
+.bg-opensource { background-color: @mainColorBlue; }
 
 .pagination {
     position: fixed;
@@ -79,6 +89,7 @@ body { overflow: hidden; }
     -moz-border-radius      : 25px;
     border-radius           : 25px;
 
+    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -92,6 +103,7 @@ body { overflow: hidden; }
     border-radius           : 50%;
 
     cursor: pointer;
+    background-color: rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -111,7 +123,7 @@ body { overflow: hidden; }
     margin: auto;
     padding: 1px 0;
 
-    color: #dac6cb;
+    color: @fontColor;
 }
 
 /*第一页 个人信息*/
@@ -140,6 +152,7 @@ body { overflow: hidden; }
     -webkit-border-radius   : 50%;
     -moz-border-radius      : 50%;
     border-radius           : 50%;
+    border: 8px solid rgba(219, 198, 203, 0.6);
 }
 
 .info-icon {
@@ -151,7 +164,7 @@ body { overflow: hidden; }
     line-height: 36px;
     vertical-align: middle;
 
-    color: #666;
+    color: @bgColor;
 }
 
 .icon-list {
@@ -163,7 +176,12 @@ body { overflow: hidden; }
 .icon-list a {
     height: auto;
     font-size: 40px;
-    color: #ff3e60;
+    color: rgb(16, 22, 71);
+    color: rgba(16, 22, 71, 0.8);
+
+    &:hover {
+        color: @bgColor;
+    }
 }
 
 .iconmoon:before {
@@ -202,7 +220,6 @@ body { overflow: hidden; }
 .skills {
     position: relative;
     height: @skillsHeight;
-    border: 1px solid #ff3e60;
 
     line-height: 0.9;
     font-family: "Meiryo UI", "Segoe UI", "Helvetica Neue", Helvetica, "Microsoft YaHei", "微软雅黑", Arial;
@@ -343,7 +360,7 @@ body { overflow: hidden; }
     height: 100%;
 
     font-size: 18px;
-    color: #333;
+    color: @strongColorGray;
 }
 
 .page-title {
@@ -352,12 +369,13 @@ body { overflow: hidden; }
     font-size: 40px;
     font-weight: bold;
     line-height: 1.1em;
+    color: @fontColor;
 }
 
 .title-border-bottom {
     display: inline-block;
     text-align: center;
-    border-bottom: 5px solid #333;
+    border-bottom: 5px solid @fontColor;
 }
 
 .page-title em {
@@ -365,7 +383,7 @@ body { overflow: hidden; }
     font-size: 22px;
     font-weight: normal;
     font-style: normal;
-    color: #666666;
+    color: @strongColorGray;
 }
 
 .project-left .project-block { text-align: right; }
@@ -380,8 +398,8 @@ body { overflow: hidden; }
     -moz-border-radius      : 10px;
     border-radius           : 10px;
 
-    color: #FFFFFF;
-    background-color: #ffe34b;
+    color: @mainColorGreen;
+    background-color: @fontColor;
 }
 
 .project-right .project-block {
@@ -396,7 +414,7 @@ body { overflow: hidden; }
 
 .project-block .date {
     margin: 0;
-    color: #CBCBCB;
+    color: @bgColor;
 }
 
 .project-block p,
@@ -420,7 +438,8 @@ body { overflow: hidden; }
     -webkit-border-radius   : 50%;
     -moz-border-radius      : 50%;
     border-radius           : 50%;
-    background-color: rgba(255, 227, 75, 0.45);
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.45);
 }
 
 .small-circle {
@@ -437,19 +456,19 @@ body { overflow: hidden; }
     -webkit-border-radius   : 50%;
     -moz-border-radius      : 50%;
     border-radius           : 50%;
-    background-color: #ffe34b;
+    background-color: @fontColor;
 }
 
 .project-left .triangle {
     top: 45px;
     right: -20px;
-    border-left-color: #ffe34b;
+    border-left-color: @fontColor;
 }
 
 .project-right .triangle {
     bottom: 45px;
     left: -20px;
-    border-right-color: #ffe34b;
+    border-right-color: @fontColor;
 }
 
 .project-left .large-circle {
@@ -468,7 +487,7 @@ body { overflow: hidden; }
     bottom: 10%;
     right: -1px;
     width: 2px;
-    background-color: #ffe34b;
+    background-color: @fontColor;
 }
 
 /* -------- 第三页 --------*/
@@ -484,9 +503,9 @@ body { overflow: hidden; }
     -webkit-border-radius   : 7px;
     -moz-border-radius      : 7px;
     border-radius           : 7px;
+    border: 5px solid @fontColor;
 
-    color: #333333;
-    background-color: #576eff;
+    background-color: @fontColor;
     cursor: pointer;
 }
 
@@ -501,7 +520,7 @@ body { overflow: hidden; }
 .intern-separator {
     height:2px;
     margin: 0 30px;
-    background-color: #576eff;
+    background-color: @fontColor;
 }
 
 .intern-block-wrapper .large-circle {
@@ -509,11 +528,6 @@ body { overflow: hidden; }
     left: 0;
     right: 0;
     margin: auto;
-    background-color: rgba(87, 110, 255, 0.45);
-}
-
-.intern-block-wrapper .small-circle {
-    background-color: #576eff;
 }
 
 .intern-block .picture {
@@ -527,7 +541,8 @@ body { overflow: hidden; }
 
 .intern-block .text {
     padding: 15px;
-    color: #FFFFFF;
+    font-size: 15px;
+    color: #e9d07d;
 
     -webkit-transform   : rotateY(180deg);
     -moz-transform      : rotateY(180deg);
@@ -540,42 +555,29 @@ body { overflow: hidden; }
     margin-bottom: 15px;
     font-size: 24px;
     line-height: 1.2em;
+    color: @mainColorYellow;
 }
 
 .enter {
     margin-top: 10px;
-    color: aqua;
+    color: @strongColorBlue;
     text-align: right;
     text-decoration: underline;
 }
 
 
 /* -------- 第四页 ------- */
-.bg-opensource .project-block,
-.bg-opensource .project-separator,
-.bg-opensource .small-circle {
-    background-color: #53ff9b;
-}
-
-.bg-opensource .project-left .triangle {
-    top: 65px;
-    border-left-color: #53ff9b;
-}
-
-.bg-opensource .project-right .triangle {
-    bottom: 65px;
-    border-right-color: #53ff9b;
-}
-
-.bg-opensource .large-circle {
-    top: 62px;
-    background-color: rgba(83, 255, 155, 0.45);
-}
+.bg-opensource .project-left .triangle { top: 65px; }
+.bg-opensource .project-right .triangle { bottom: 65px; }
+.bg-opensource .large-circle { top: 62px; }
 
 .bg-opensource .project-right .large-circle {
     top: auto;
     bottom: 62px;
 }
+
+.bg-opensource .project-block { color: @mainColorBlue; }
+.bg-opensource .page-title em { color: @bgColor; }
 
 .bg-opensource .project-left,
 .bg-opensource .project-right {
@@ -593,7 +595,7 @@ body { overflow: hidden; }
 
 .download-cv:before {
     margin-right: 7px;
-    font-size: 0.8em;
+    font-size: 0.9em;
     vertical-align: middle;
 }
 

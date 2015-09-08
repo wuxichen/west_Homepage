@@ -90,16 +90,16 @@ body {
   font: normal 14px/1.5 "Segoe UI", "Helvetica Neue", Helvetica, "Microsoft YaHei", "微软雅黑", Arial;
 }
 .bg-info {
-  background-color: #ff3e60;
+  background-color: #e65e68;
 }
 .bg-project {
-  background-color: #ffe34b;
+  background-color: #77dcba;
 }
 .bg-intern {
-  background-color: #576eff;
+  background-color: #f6dc85;
 }
 .bg-opensource {
-  background-color: #53ff9b;
+  background-color: #65aee1;
 }
 .pagination {
   position: fixed;
@@ -138,8 +138,7 @@ body {
   height: 560px;
   margin: auto;
   padding: 1px 0;
-  background-color: white;
-  color: #333;
+  color: #dac6cb;
 }
 /*第一页 个人信息*/
 .info-container {

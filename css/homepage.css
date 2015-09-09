@@ -505,10 +505,18 @@ body {
   color: #f6dc85;
 }
 .enter {
+  display: block;
   margin-top: 10px;
   color: #384c76;
   text-align: right;
   text-decoration: underline;
+}
+.enter:hover {
+  color: #dbc6cb;
+}
+.enter i {
+  margin-left: 5px;
+  font-size: 0.7em;
 }
 /* -------- 第四页 ------- */
 .bg-opensource .project-left .triangle {
@@ -543,11 +551,13 @@ body {
   clear: both;
 }
 .download-cv:before {
+  color: #ffffff;
   margin-right: 7px;
   font-size: 0.9em;
   vertical-align: middle;
 }
 .download-cv {
+  color: #ffffff;
   font-size: 0.5em;
   text-decoration: underline;
 }

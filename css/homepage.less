@@ -563,10 +563,20 @@ body { overflow: hidden; }
 }
 
 .enter {
+    display: block;
     margin-top: 10px;
     color: @strongColorBlue;
     text-align: right;
     text-decoration: underline;
+
+    &:hover {
+        color: @bgColor;
+    }
+
+    & i {
+        margin-left: 5px;
+        font-size: 0.7em;
+    }
 }
 
 
@@ -598,12 +608,14 @@ body { overflow: hidden; }
 }
 
 .download-cv:before {
+    color: #ffffff;
     margin-right: 7px;
     font-size: 0.9em;
     vertical-align: middle;
 }
 
 .download-cv {
+    color: #ffffff;
     font-size: 0.5em;
     text-decoration: underline;
 }

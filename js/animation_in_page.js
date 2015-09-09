@@ -100,6 +100,10 @@
         });
     });
 
+    $('.enter').click(function(event) {
+        event.stopPropagation();
+    });
+
 
 
 })();

@@ -59,6 +59,7 @@ var pageAnimation = (function() {
     // 存储setTimeout的定时器，该屏结束后clearTimeout解除定时器
     var timeoutId = [];
 
+
     /**
      * 动画开始函数 生成器
      * @param index
@@ -85,13 +86,30 @@ var pageAnimation = (function() {
     }
 
     function beginAnimation(element, className) {
-        $(element).removeClass(className+'-end').addClass(className+'-begin');
+        var transitionDuration = getVendorPropertyObj('transition', '');
+        $(element).css(transitionDuration).removeClass(className+'-end').addClass(className+'-begin');
     }
 
     function runAnimation(element, className, delay) {
         return setTimeout(function() {
             $(element).removeClass(className+'-begin').addClass(className+'-end');
         }, delay+1000);
+    }
+
+    /**
+     * CSS属性 'prop = value' 加上各个浏览器前缀，返回其对象
+     * @param prop
+     * @param value
+     * @returns {{}}
+     */
+    function getVendorPropertyObj(prop, value) {
+        var vendors = ['-webkit-', '-moz-', '-ms-', '-o-', ''].reverse();
+        var resultObj = {};
+
+        for (var i = vendors.length; i--; ) {
+            resultObj[ vendors[i] + prop ] = value;
+        }
+        return resultObj;
     }
 
     /**
@@ -109,6 +127,7 @@ var pageAnimation = (function() {
     }
 
 
+    // 返回 begin, run, end 动画函数组成的 数组
     return (function() {
         var animationFunctionArr = [];
         for (var i = 0; i < config.length; i++) {

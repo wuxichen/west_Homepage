@@ -542,7 +542,7 @@ body { overflow: hidden; }
 .intern-block .text {
     padding: 15px;
     font-size: 15px;
-    color: #e9d07d;
+    color: #e0c773;
 
     -webkit-transform   : rotateY(180deg);
     -moz-transform      : rotateY(180deg);
@@ -602,5 +602,52 @@ body { overflow: hidden; }
 .download-cv {
     font-size: 0.5em;
     text-decoration: underline;
+}
+
+/* ----- 动画相关 ----- */
+
+.transition-color {
+    -webkit-transition  : color 0.7s ease;
+    -moz-transition     : color 0.7s ease;
+    -ms-transition      : color 0.7s ease;
+    -o-transition       : color 0.7s ease;
+    transition          : color 0.7s ease;
+}
+
+// 从左到右 渐入
+@fade-to-right: transform 0.7s ease, opacity 0.5s ease, visibility 0.5s ease;
+.fade-to-right {
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transition  : @fade-to-right;
+    -moz-transition     : @fade-to-right;
+    -ms-transition      : @fade-to-right;
+    -o-transition       : @fade-to-right;
+    transition          : @fade-to-right;
+}
+
+@fade-to-right-begin: translateX(-100px);
+.fade-to-right-begin {
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transform   : @fade-to-right-begin;
+    -moz-transform      : @fade-to-right-begin;
+    -ms-transform       : @fade-to-right-begin;
+    -o-transform        : @fade-to-right-begin;
+    transform           : @fade-to-right-begin;
+}
+
+@fade-to-right-end: translateX(0);
+.fade-to-right-end {
+    opacity: 1;
+    visibility: visible;
+
+    -webkit-transform   : @fade-to-right-end;
+    -moz-transform      : @fade-to-right-end;
+    -ms-transform       : @fade-to-right-end;
+    -o-transform        : @fade-to-right-end;
+    transform           : @fade-to-right-end;
 }
 

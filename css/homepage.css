@@ -489,7 +489,7 @@ body {
 .intern-block .text {
   padding: 15px;
   font-size: 15px;
-  color: #e9d07d;
+  color: #e0c773;
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
@@ -548,4 +548,39 @@ body {
 .download-cv {
   font-size: 0.5em;
   text-decoration: underline;
+}
+/* ----- 动画相关 ----- */
+.transition-color {
+  -webkit-transition: color 0.7s ease;
+  -moz-transition: color 0.7s ease;
+  -ms-transition: color 0.7s ease;
+  -o-transition: color 0.7s ease;
+  transition: color 0.7s ease;
+}
+.fade-to-right {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: transform 0.7s ease, opacity 0.5s ease, visibility 0.5s ease;
+  -moz-transition: transform 0.7s ease, opacity 0.5s ease, visibility 0.5s ease;
+  -ms-transition: transform 0.7s ease, opacity 0.5s ease, visibility 0.5s ease;
+  -o-transition: transform 0.7s ease, opacity 0.5s ease, visibility 0.5s ease;
+  transition: transform 0.7s ease, opacity 0.5s ease, visibility 0.5s ease;
+}
+.fade-to-right-begin {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(-100px);
+  -moz-transform: translateX(-100px);
+  -ms-transform: translateX(-100px);
+  -o-transform: translateX(-100px);
+  transform: translateX(-100px);
+}
+.fade-to-right-end {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
 }

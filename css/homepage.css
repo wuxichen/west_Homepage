@@ -557,14 +557,15 @@ body {
   -o-transition: color 0.7s ease;
   transition: color 0.7s ease;
 }
-.fade-to-right {
+.fade-to-right,
+.fade-to-left {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: transform 0.7s ease, opacity 0.5s ease, visibility 0.5s ease;
-  -moz-transition: transform 0.7s ease, opacity 0.5s ease, visibility 0.5s ease;
-  -ms-transition: transform 0.7s ease, opacity 0.5s ease, visibility 0.5s ease;
-  -o-transition: transform 0.7s ease, opacity 0.5s ease, visibility 0.5s ease;
-  transition: transform 0.7s ease, opacity 0.5s ease, visibility 0.5s ease;
+  -webkit-transition: transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
+  -moz-transition: transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
+  -ms-transition: transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
+  -o-transition: transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
+  transition: transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
 }
 .fade-to-right-begin {
   opacity: 0;
@@ -575,7 +576,8 @@ body {
   -o-transform: translateX(-100px);
   transform: translateX(-100px);
 }
-.fade-to-right-end {
+.fade-to-right-end,
+.fade-to-left-end {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateX(0);
@@ -583,4 +585,13 @@ body {
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
+}
+.fade-to-left-begin {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(100px);
+  -moz-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  -o-transform: translateX(100px);
+  transform: translateX(100px);
 }

@@ -614,17 +614,18 @@ body { overflow: hidden; }
     transition          : color 0.7s ease;
 }
 
-// 从左到右 渐入
-@fade-to-right: transform 0.7s ease, opacity 0.5s ease, visibility 0.5s ease;
-.fade-to-right {
+// 从左到右，从右到左 渐入
+@fade-to: transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
+.fade-to-right,
+.fade-to-left {
     opacity: 0;
     visibility: hidden;
 
-    -webkit-transition  : @fade-to-right;
-    -moz-transition     : @fade-to-right;
-    -ms-transition      : @fade-to-right;
-    -o-transition       : @fade-to-right;
-    transition          : @fade-to-right;
+    -webkit-transition  : @fade-to;
+    -moz-transition     : @fade-to;
+    -ms-transition      : @fade-to;
+    -o-transition       : @fade-to;
+    transition          : @fade-to;
 }
 
 @fade-to-right-begin: translateX(-100px);
@@ -639,15 +640,27 @@ body { overflow: hidden; }
     transform           : @fade-to-right-begin;
 }
 
-@fade-to-right-end: translateX(0);
-.fade-to-right-end {
+@fade-to-end: translateX(0);
+.fade-to-right-end,
+.fade-to-left-end {
     opacity: 1;
     visibility: visible;
 
-    -webkit-transform   : @fade-to-right-end;
-    -moz-transform      : @fade-to-right-end;
-    -ms-transform       : @fade-to-right-end;
-    -o-transform        : @fade-to-right-end;
-    transform           : @fade-to-right-end;
+    -webkit-transform   : @fade-to-end;
+    -moz-transform      : @fade-to-end;
+    -ms-transform       : @fade-to-end;
+    -o-transform        : @fade-to-end;
+    transform           : @fade-to-end;
 }
 
+@fade-to-left-begin: translateX(100px);
+.fade-to-left-begin {
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transform   : @fade-to-left-begin;
+    -moz-transform      : @fade-to-left-begin;
+    -ms-transform       : @fade-to-left-begin;
+    -o-transform        : @fade-to-left-begin;
+    transform           : @fade-to-left-begin;
+}

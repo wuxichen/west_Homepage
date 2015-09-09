@@ -7,9 +7,9 @@ var pageAnimation = (function() {
     // 配置元素、类名和延迟时间
     var config = [
         {
-            'element': ['.bg-info .fade-to-right'],
-            'className': ['fade-to-right'],
-            'delay': [1200],
+            'element': ['.bg-info .fade-to-right', '.bg-info .fade-to-left'],
+            'className': ['fade-to-right', 'fade-to-left'],
+            'delay': [1200, 1200],
         }
     ];
 
@@ -67,36 +67,6 @@ var pageAnimation = (function() {
         }
     }
 
-    /**
-     * 初始化动画，即加上transition类和初始样式
-     */
-    function initialAnimation() {
-
-        var noCSSTransitionDelay = getVendorPropertyObj('transition-delay', '0s');
-        var hasCSSTransitionDelay = getVendorPropertyObj('transition-delay', '');
-
-        $('.fade-to-right').addClass('fade-to-right-begin');
-        //$('.fade-to-right').css(hasCSSTransitionDelay);
-    }
-
-    /**
-     * CSS属性 'prop = value' 加上各个浏览器前缀，返回其对象
-     * @param prop
-     * @param value
-     * @returns {{}}
-     */
-    function getVendorPropertyObj(prop, value) {
-        var vendors = ['-webkit-', '-moz-', '-ms-', '-o-', ''].reverse();
-        var resultObj = {};
-
-        for (var i = vendors.length; i--; ) {
-            resultObj[ vendors[i] + prop ] = value;
-        }
-        return resultObj;
-    }
-
-    // 初始化动画样式
-    initialAnimation();
 
     return (function() {
         var animationFunctionArr = [];

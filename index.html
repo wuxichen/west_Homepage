@@ -25,23 +25,23 @@
                     </ul>
                 </div>
                 <div class="skill-container">
-                    <h2><span class="title-border-bottom">技能列表</span></h2>
+                    <h2 id="info-title" class="fade"><span class="title-border-bottom">技能列表</span></h2>
                     <div class="skills">
-                        <p class="medium-font jquery">jQuery</p>
-                        <p class="medium-font less">Less</p>
-                        <p class="small-font grunt">Grunt</p>
-                        <p class="large-font css">CSS</p>
-                        <p class="large-font javascript">JavaScript</p>
-                        <p class="small-font canvas">Canvas</p>
-                        <p class="medium-font html5">Html5</p>
-                        <p class="medium-font css3">CSS3</p>
-                        <p class="small-font git">Git</p>
-                        <p class="medium-font angularjs">AngularJS</p>
-                        <p class="large-font html">Html</p>
-                        <p class="medium-font zepto">Zepto</p>
-                        <p class="small-font bootstrap">Bootstrap</p>
-                        <p class="small-font svn">SVN</p>
-                        <p class="medium-font php">PHP</p>
+                        <p id="jquery" class="medium-font jquery fade">jQuery</p>
+                        <p id="less" class="medium-font less fade">Less</p>
+                        <p id="grunt" class="small-font grunt fade">Grunt</p>
+                        <p id="css" class="large-font css fade">CSS</p>
+                        <p id="javascript" class="large-font javascript fade">JavaScript</p>
+                        <p id="canvas" class="small-font canvas fade">Canvas</p>
+                        <p id="html5" class="medium-font html5 fade">Html5</p>
+                        <p id="css3" class="medium-font css3 fade">CSS3</p>
+                        <p id="git" class="small-font git fade">Git</p>
+                        <p id="angularjs" class="medium-font angularjs fade">AngularJS</p>
+                        <p id="html" class="large-font html fade">Html</p>
+                        <p id="zepto" class="medium-font zepto fade">Zepto</p>
+                        <p id="bootstrap" class="small-font bootstrap fade">Bootstrap</p>
+                        <p id="svn" class="small-font svn fade">SVN</p>
+                        <p id="php" class="medium-font php fade">PHP</p>
                     </div>
                 </div>
             </div>
@@ -49,32 +49,32 @@
         <div class="page-section bg-project">
             <div class="content-container clearfix">
                 <div class="project-left container-padding">
-                    <h2 class="page-title title-border-bottom">项目经验</h2>
-                    <p>项目中的前端部分主要采用jQuery, AngularJS与Bootstrap框架，也注重编写原生JavaScript实现功能。</p>
-                    <div class="project-block">
+                    <h2 class="page-title title-border-bottom fade">项目经验</h2>
+                    <p class="fade">项目中的前端部分主要采用jQuery, AngularJS与Bootstrap框架，也注重编写原生JavaScript实现功能。</p>
+                    <div class="project-block fade-to-left">
                         <h3>微软亚洲研究院“智慧校园”</h3>
                         <p class="date">2014.04 – 2014.05</p>
                         <p>- 开发”Smart USTC”网站，通过获取校园一卡通及社交网站数据，向用户展示作息、消费统计图表，并给出健康建议；</p>
                         <p>- 负责前端界面以及数据展示工作，设计数据卡片进出动画，并采用HighCharts将用户作息活动绘制成各项统计图表；</p>
-
                         <div class="triangle"></div>
-                        <div class="large-circle">
-                            <div class="small-circle"></div>
-                        </div>
                     </div>
-                    <div class="project-separator"></div>
+
+                    <div id="project-left-circle" class="large-circle scale">
+                        <div class="small-circle"></div>
+                    </div>
+                    <div id="project-separator" class="project-separator scale"></div>
                 </div>
                 <div class="project-right container-padding">
-                    <div class="project-block">
+                    <div class="project-block fade-to-right">
                         <h3>科大网络中心报修系统开发</h3>
                         <p class="date">2015.01 – 2015.04</p>
                         <p>- 系统可供用户对校园中的网络设备故障申请报修单，维修人员可领取、分配报修单及提交维修记录等操作；</p>
                         <p>- 网站后端采用Laravel，前端采用Bootstrap + AngularJS框架进行开发。负责报修人申请、修改和撤销报修单等功能，以及Angular的嵌套路由ui-router；</p>
-
                         <div class="triangle"></div>
-                        <div class="large-circle">
-                            <div class="small-circle"></div>
-                        </div>
+                    </div>
+
+                    <div id="project-right-circle" class="large-circle scale">
+                        <div class="small-circle"></div>
                     </div>
                 </div>
             </div>
@@ -82,12 +82,12 @@
         <div class="page-section bg-intern">
             <div class="content-container container-padding">
                 <h2 class="page-title">
-                    <span class="title-border-bottom">实习经历</span>
-                    <em>2015.06 - 2015.09 于触宝电话生活黄页组 担任前端开发工程师（实习）</em>
+                    <span class="title-border-bottom fade-to-right">实习经历</span>
+                    <em class="fade-to-left">2015.06 - 2015.09 于触宝电话生活黄页组 担任前端开发工程师（实习）</em>
                 </h2>
                 <div class="intern-block-container clearfix">
                     <div class="intern-block-wrapper">
-                        <div class="intern-block">
+                        <div id="intern-block1" class="intern-block rotate">
                             <img class="picture" src="images/cootek_teacher.jpg">
                             <div class="text display-none">
                                 <h3>运营活动页面</h3>
@@ -96,13 +96,13 @@
                                 <p class="enter">点击进入</p>
                             </div>
                         </div>
-                        <div class="large-circle">
+                        <div id="intern-circle1" class="large-circle fade">
                             <div class="small-circle"></div>
                         </div>
                     </div>
 
                     <div class="intern-block-wrapper">
-                        <div class="intern-block">
+                        <div id="intern-block2" class="intern-block rotate">
                             <img class="picture" src="images/cootek_recruit.jpg">
                             <div class="text display-none">
                                 <h3>2016年校招移动页面开发</h3>
@@ -111,13 +111,13 @@
                                 <p class="enter">点击进入</p>
                             </div>
                         </div>
-                        <div class="large-circle">
+                        <div id="intern-circle2" class="large-circle fade">
                             <div class="small-circle"></div>
                         </div>
                     </div>
 
                     <div class="intern-block-wrapper">
-                        <div class="intern-block">
+                        <div id="intern-block3" class="intern-block rotate">
                             <img class="picture" src="images/cootek_weather.jpg">
                             <div class="text display-none">
                                 <h3>天气预报页面</h3>
@@ -126,49 +126,51 @@
                                 <p class="enter">点击进入</p>
                             </div>
                         </div>
-                        <div class="large-circle">
+                        <div id="intern-circle3" class="large-circle fade">
                             <div class="small-circle"></div>
                         </div>
                     </div>
                 </div>
-                <div class="intern-separator"></div>
+                <div id="intern-separator" class="intern-separator scale"></div>
             </div>
         </div>
         <div class="page-section bg-opensource">
             <div class="content-container clearfix">
                 <h2 class="page-title">
-                    <span class="title-border-bottom">开源项目</span>
-                    <em>实习期间开发的组件，帮助高效完成工作的同时也提高自己</em>
+                    <span class="title-border-bottom fade-to-right">开源项目</span>
+                    <em class="fade-to-left">实习期间开发的组件，帮助高效完成工作的同时也提高自己</em>
                 </h2>
                 <div class="project-left container-padding">
-                    <div class="project-block">
+                    <div id="opensource-block1" class="project-block fade-to-left">
                         <h3>loadReady.js 加载等待组件</h3>
                         <p class="date">2015.06 – 2015.09</p>
                         <p>- 开发”Smart USTC”网站，通过获取校园一卡通及社交网站数据，向用户展示作息、消费统计图表，并给出健康建议；</p>
                         <p>- 负责前端界面以及数据展示工作，设计数据卡片进出动画，并采用HighCharts将用户作息活动绘制成各项统计图表；</p>
-
                         <div class="triangle"></div>
-                        <div class="large-circle">
-                            <div class="small-circle"></div>
-                        </div>
                     </div>
-                    <div class="project-separator"></div>
+
+                    <div id="opensource-circle1" class="large-circle fade">
+                        <div class="small-circle"></div>
+                    </div>
+                    <div id="opensource-separator" class="project-separator scale"></div>
                 </div>
+
                 <div class="project-right container-padding">
-                    <div class="project-block">
+                    <div id="opensource-block2" class="project-block fade-to-right">
                         <h3>CootekJSON构建工具开发</h3>
                         <p class="date">2015.06 – 2015.09</p>
                         <p>- 采用AngularJS+Bootstrap框架开发一套能由JSON代码构建出具有层次结构输入框，并带有导航侧边栏的工具，能够把握JSON代码的整体结构也能更直观地对其进行修改；</p>
                         <p>- 项目采用AngularJS指令构建多层次输入框，导航栏则采用了Bootstrap的Affix插件；</p>
                         <p class="enter">点击进入</p>
                         <div class="triangle"></div>
-                        <div class="large-circle">
-                            <div class="small-circle"></div>
-                        </div>
+                    </div>
+
+                    <div id="opensource-circle2" class="large-circle fade">
+                        <div class="small-circle"></div>
                     </div>
                 </div>
 
-                <h2 class="page-title">
+                <h2 id="opensource-download" class="page-title fade">
                     <span class="title-border-bottom">简历下载</span><br>
                     <span class="iconmoon icon-pdf download-cv">吴熙辰 前端开发工程师</span>
                 </h2>

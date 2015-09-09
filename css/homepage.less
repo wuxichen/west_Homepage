@@ -144,6 +144,9 @@ body { overflow: hidden; }
 }
 
 .info-photo {
+    position: relative;
+    z-index: 1;
+    
     float: right;
     width: 220px;
     height: 220px;
@@ -153,6 +156,7 @@ body { overflow: hidden; }
     -moz-border-radius      : 50%;
     border-radius           : 50%;
     border: 8px solid rgba(219, 198, 203, 0.6);
+
 }
 
 .info-icon {
@@ -472,13 +476,13 @@ body { overflow: hidden; }
 }
 
 .project-left .large-circle {
-    top: 42px;
-    right: -38px;
+    top: 262px;
+    right: 9px;
 }
 
 .project-right .large-circle {
-    bottom: 42px;
-    left: -38px;
+    bottom: 174px;
+    left: 9px;
 }
 
 .project-separator {
@@ -569,11 +573,11 @@ body { overflow: hidden; }
 /* -------- 第四页 ------- */
 .bg-opensource .project-left .triangle { top: 65px; }
 .bg-opensource .project-right .triangle { bottom: 65px; }
-.bg-opensource .large-circle { top: 62px; }
+.bg-opensource .large-circle { top: 73px; }
 
 .bg-opensource .project-right .large-circle {
     top: auto;
-    bottom: 62px;
+    bottom: 67px;
 }
 
 .bg-opensource .project-block { color: @mainColorBlue; }
@@ -664,3 +668,103 @@ body { overflow: hidden; }
     -o-transform        : @fade-to-left-begin;
     transform           : @fade-to-left-begin;
 }
+
+// 渐入
+@fade: opacity 0.5s linear, visibility 0.5s linear;
+.fade {
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transition  : @fade;
+    -moz-transition     : @fade;
+    -ms-transition      : @fade;
+    -o-transition       : @fade;
+    transition          : @fade;
+}
+
+.fade-begin {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fade-end {
+    opacity: 1;
+    visibility: visible;
+}
+
+// 扩展渐入
+@scale: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+.scale {
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transition      : @scale;
+    -moz-transition         : @scale;
+    -ms-transition          : @scale;
+    -o-transition           : @scale;
+    transition              : @scale;
+}
+
+@scale-begin: scale(0);
+.scale-begin {
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transform  : @scale-begin;
+    -moz-transform     : @scale-begin;
+    -ms-transform      : @scale-begin;
+    -o-transform       : @scale-begin;
+    transform          : @scale-begin;
+}
+
+@scale-end: scale(1);
+.scale-end {
+    opacity: 1;
+    visibility: visible;
+
+    -webkit-transform  : @scale-end;
+    -moz-transform     : @scale-end;
+    -ms-transform      : @scale-end;
+    -o-transform       : @scale-end;
+    transform          : @scale-end;
+}
+
+// 翻转渐入
+@rotate: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+.rotate {
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transition      : @rotate;
+    -moz-transition         : @rotate;
+    -ms-transition          : @rotate;
+    -o-transition           : @rotate;
+    transition              : @rotate;
+}
+
+@rotate-begin: rotateY(-45deg);
+.rotate-begin {
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transform  : @rotate-begin;
+    -moz-transform     : @rotate-begin;
+    -ms-transform      : @rotate-begin;
+    -o-transform       : @rotate-begin;
+    transform          : @rotate-begin;
+}
+
+@rotate-end: rotateY(0);
+.rotate-end {
+    opacity: 1;
+    visibility: visible;
+
+    -webkit-transform  : @rotate-end;
+    -moz-transform     : @rotate-end;
+    -ms-transform      : @rotate-end;
+    -o-transform       : @rotate-end;
+    transform          : @rotate-end;
+}
+
+
+

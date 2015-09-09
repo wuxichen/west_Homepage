@@ -157,6 +157,8 @@ body {
   line-height: 40px;
 }
 .info-photo {
+  position: relative;
+  z-index: 1;
   float: right;
   width: 220px;
   height: 220px;
@@ -431,12 +433,12 @@ body {
   border-right-color: #ffffff;
 }
 .project-left .large-circle {
-  top: 42px;
-  right: -38px;
+  top: 262px;
+  right: 9px;
 }
 .project-right .large-circle {
-  bottom: 42px;
-  left: -38px;
+  bottom: 174px;
+  left: 9px;
 }
 .project-separator {
   position: absolute;
@@ -516,11 +518,11 @@ body {
   bottom: 65px;
 }
 .bg-opensource .large-circle {
-  top: 62px;
+  top: 73px;
 }
 .bg-opensource .project-right .large-circle {
   top: auto;
-  bottom: 62px;
+  bottom: 67px;
 }
 .bg-opensource .project-block {
   color: #65aee1;
@@ -594,4 +596,75 @@ body {
   -ms-transform: translateX(100px);
   -o-transform: translateX(100px);
   transform: translateX(100px);
+}
+.fade {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s linear, visibility 0.5s linear;
+  -moz-transition: opacity 0.5s linear, visibility 0.5s linear;
+  -ms-transition: opacity 0.5s linear, visibility 0.5s linear;
+  -o-transition: opacity 0.5s linear, visibility 0.5s linear;
+  transition: opacity 0.5s linear, visibility 0.5s linear;
+}
+.fade-begin {
+  opacity: 0;
+  visibility: hidden;
+}
+.fade-end {
+  opacity: 1;
+  visibility: visible;
+}
+.scale {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  -moz-transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  -ms-transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  -o-transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+}
+.scale-begin {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.scale-end {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.rotate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+  -moz-transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+  -ms-transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+  -o-transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+  transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+}
+.rotate-begin {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: rotateY(-45deg);
+  -moz-transform: rotateY(-45deg);
+  -ms-transform: rotateY(-45deg);
+  -o-transform: rotateY(-45deg);
+  transform: rotateY(-45deg);
+}
+.rotate-end {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
 }

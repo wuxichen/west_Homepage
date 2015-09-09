@@ -67,6 +67,7 @@
             for (var i = vendors.length; i--; ) {
                 cssObj[ vendors[i] + 'transform' ] = 'rotateY(' + currentDegree + 'deg)';
             }
+            element.css('transition-duration', '0s');
             element.css(cssObj);
 
             // 当转到一半时候，图片变成文字

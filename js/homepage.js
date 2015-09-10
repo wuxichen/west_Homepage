@@ -134,7 +134,11 @@ var pageAnimation = (function() {
             animationFunctionArr.push({
                 begin: funcGenerator(i, beginAnimation),
                 run: funcGenerator(i, runAnimation),
-                end: cancelTimeout.bind(this, i)
+                end: (function(i) {
+                    return function() {
+                        cancelTimeout(i);
+                    }
+                })(i)
             });
         }
 

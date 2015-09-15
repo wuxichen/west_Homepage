@@ -561,6 +561,9 @@ body {
   font-size: 0.5em;
   text-decoration: underline;
 }
+.download-cv:hover {
+  color: #384c76;
+}
 /* ----- 动画相关 ----- */
 .transition-color {
   -webkit-transition: color 0.7s ease;

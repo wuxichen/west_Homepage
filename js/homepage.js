@@ -22,7 +22,7 @@ var pageAnimation = (function() {
 
         }, {
             'element': ['.bg-project .fade', '#project-separator', '#project-left-circle', '#project-right-circle',
-                '.bg-project .fade-to-left', '.bg-project .fade-to-right'],
+                '#project-left-block', '#project-right-block'],
             'className': ['fade', 'scale', 'scale', 'scale', 'fade-to-left', 'fade-to-right'],
             'delay': [200, 500, 800, 1000, 1500, 1500]
 
@@ -58,6 +58,7 @@ var pageAnimation = (function() {
 
     // 存储setTimeout的定时器，该屏结束后clearTimeout解除定时器
     var timeoutId = [];
+    var transitionProp = ['-webkit-transition', '-moz-transition', '-o-transition', '-ms-transition', 'transition'];
 
 
     /**
@@ -86,14 +87,49 @@ var pageAnimation = (function() {
     }
 
     function beginAnimation(element, className) {
-        var transitionDuration = getVendorPropertyObj('transition', '');
-        $(element).css(transitionDuration).removeClass(className+'-end').addClass(className+'-begin');
+
+        if (isSupportCss(transitionProp)) {
+
+            var transitionDuration = getVendorPropertyObj('transition', '');
+            $(element).css(transitionDuration).removeClass(className+'-end').addClass(className+'-begin');
+
+        } else {
+            $(element).removeClass(className);
+            $(element).fadeOut();
+            //$(element).css('visibility', 'hidden');
+        }
     }
 
     function runAnimation(element, className, delay) {
-        return setTimeout(function() {
-            $(element).removeClass(className+'-begin').addClass(className+'-end');
-        }, delay+1000);
+
+        if (isSupportCss(transitionProp)) {
+
+            return setTimeout(function() {
+                $(element).removeClass(className+'-begin').addClass(className+'-end');
+            }, delay+1000);
+
+        } else {
+
+            return setTimeout(function() {
+                //$(element).css('visibility', '');
+                $(element).fadeIn();
+            }, delay+1000);
+
+        }
+
+    }
+
+    /**
+     * 是否支持css的某个属性
+     */
+    function isSupportCss(propertyArr){
+        var body = $("body")[0];
+        for (var i = 0; i < propertyArr.length; i++) {
+            if(propertyArr[i] in body.style){
+                return true;
+            }
+        }
+        return false;
     }
 
     /**

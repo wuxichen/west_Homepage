@@ -124,7 +124,16 @@
         pageIndex = pageNo === undefined? pageIndex : pageNo;
         var destTop = -sections.eq(pageIndex).position().top;
         var transitionProp = ['-webkit-transition', '-moz-transition', '-o-transition', '-ms-transition', 'transition'];
+        var transformProp = ['-webkit-transform', '-moz-transform', '-o-transform', '-ms-transform', 'transform'];
+
         var slideOptions = {
+            '-webkit-transform': 'translateY('+ destTop +'px)',
+            '-moz-transform': 'translateY('+ destTop +'px)',            
+            '-ms-transform': 'translateY('+ destTop +'px)',            
+            '-o-transform': 'translateY('+ destTop +'px)',            
+            'transform': 'translateY('+ destTop +'px)'            
+        };
+        var compatibleSlideOptions = {
             'top': destTop + 'px' || 0
         };
 
@@ -140,7 +149,7 @@
             }
         }
 
-        if (isSupportCss(transitionProp)) {
+        if (isSupportCss(transitionProp) && isSupportCss(transformProp)) {
 
             if (noAnimation){
 
@@ -150,9 +159,11 @@
 
             } else {
 
-                var transitionOptions = 'top ' + options.duration + 'ms ' + options.timingFunction;
+                var transitionOptions = 'transform ' + options.duration + 'ms ' + options.timingFunction;
                 $.each(transitionProp, function() {
-                    slideOptions[this] = transitionOptions;
+                    var vendor = this.match(/^-(\w+?)-/g) || [];
+                    vendor = vendor[0] || '';
+                    slideOptions[this] = vendor + transitionOptions;
                 });
             }
 
@@ -160,7 +171,7 @@
 
         } else {
 
-            container.animate(slideOptions, noAnimation ? 0 : options.duration);
+            container.animate(compatibleSlideOptions, noAnimation ? 0 : options.duration);
         }
 
         setTimeout(function() {

@@ -631,17 +631,20 @@ body { overflow: hidden; }
 }
 
 // 从左到右，从右到左 渐入
-@fade-to: transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
+.transformFadeFunc(@transformDuration, @transformFunc, @fadeDuration, @fadeFunc) {
+    -webkit-transition: -webkit-transform @transformDuration @transformFunc, opacity @fadeDuration @fadeFunc, visibility @fadeDuration @fadeFunc;
+    -moz-transition: -moz-transform @transformDuration @transformFunc, opacity @fadeDuration @fadeFunc, visibility @fadeDuration @fadeFunc;
+    -ms-transition: -ms-transform @transformDuration @transformFunc, opacity @fadeDuration @fadeFunc, visibility @fadeDuration @fadeFunc;
+    -o-transition: -o-transform @transformDuration @transformFunc, opacity @fadeDuration @fadeFunc, visibility @fadeDuration @fadeFunc;
+    transition: transform @transformDuration @transformFunc, opacity @fadeDuration @fadeFunc, visibility @fadeDuration @fadeFunc;
+}
+
 .fade-to-right,
 .fade-to-left {
     opacity: 0;
     visibility: hidden;
 
-    -webkit-transition  : @fade-to;
-    -moz-transition     : @fade-to;
-    -ms-transition      : @fade-to;
-    -o-transition       : @fade-to;
-    transition          : @fade-to;
+    .transformFadeFunc(0.5s, ease, 0.4s, ease);
 }
 
 @fade-to-right-begin: translateX(-100px);
@@ -705,16 +708,11 @@ body { overflow: hidden; }
 }
 
 // 扩展渐入
-@scale: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
 .scale {
     opacity: 0;
     visibility: hidden;
 
-    -webkit-transition      : @scale;
-    -moz-transition         : @scale;
-    -ms-transition          : @scale;
-    -o-transition           : @scale;
-    transition              : @scale;
+    .transformFadeFunc(0.5s, ease, 0.5s, ease);
 }
 
 @scale-begin: scale(0);
@@ -747,11 +745,7 @@ body { overflow: hidden; }
     opacity: 0;
     visibility: hidden;
 
-    -webkit-transition      : @rotate;
-    -moz-transition         : @rotate;
-    -ms-transition          : @rotate;
-    -o-transition           : @rotate;
-    transition              : @rotate;
+    .transformFadeFunc(0.7s, ease, 0.7s, ease);
 }
 
 @rotate-begin: rotateY(-45deg);

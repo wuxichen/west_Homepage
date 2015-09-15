@@ -573,10 +573,10 @@ body {
 .fade-to-left {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
-  -moz-transition: transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
-  -ms-transition: transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
-  -o-transition: transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
+  -webkit-transition: -webkit-transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
+  -moz-transition: -moz-transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
+  -ms-transition: -ms-transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
+  -o-transition: -o-transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
   transition: transform 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
 }
 .fade-to-right-begin {
@@ -627,10 +627,10 @@ body {
 .scale {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
-  -moz-transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
-  -ms-transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
-  -o-transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  -o-transition: -o-transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
   transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
 }
 .scale-begin {
@@ -654,10 +654,10 @@ body {
 .rotate {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
-  -moz-transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
-  -ms-transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
-  -o-transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+  -webkit-transition: -webkit-transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+  -moz-transition: -moz-transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+  -ms-transition: -ms-transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+  -o-transition: -o-transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
   transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
 }
 .rotate-begin {

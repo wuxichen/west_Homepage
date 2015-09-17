@@ -104,6 +104,8 @@
         event.stopPropagation();
     });
 
-
+    $('.intern-block').click(function() {
+        $('#click-guide').addClass('display-none');
+    });
 
 })();

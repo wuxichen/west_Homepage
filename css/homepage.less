@@ -565,20 +565,68 @@ body { overflow: hidden; }
 .enter {
     display: block;
     margin-top: 10px;
-    color: @strongColorBlue;
     text-align: right;
     text-decoration: underline;
 
-    &:hover {
+    & a:hover {
         color: @bgColor;
     }
 
     & i {
         margin-left: 5px;
+    }
+
+    & a {
         font-size: 0.7em;
+        color: @strongColorBlue;
     }
 }
 
+.click-guide {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 80px;
+    height: 50px;
+
+    background: transparent url("../images/click_me.png") no-repeat center;
+    -webkit-background-size: 80px 50px;
+    background-size: 80px 50px;
+
+    -webkit-animation   : guide-shine 1.5s ease-in-out infinite;
+    -o-animation        : guide-shine 1.5s ease-in-out infinite;
+    animation           : guide-shine 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes guide-shine {
+    0%{ opacity: 1; }
+    50%{ opacity: .5; }
+    100%{ opacity: 1; }
+}
+
+@-moz-keyframes guide-shine {
+    0%{ opacity: 1; }
+    50%{ opacity: .5; }
+    100%{ opacity: 1; }
+}
+
+@-ms-keyframes guide-shine {
+    0%{ opacity: 1; }
+    50%{ opacity: .5; }
+    100%{ opacity: 1; }
+}
+
+@-o-keyframes guide-shine {
+    0%{ opacity: 1; }
+    50%{ opacity: .5; }
+    100%{ opacity: 1; }
+}
+
+@keyframes guide-shine {
+    0%{ opacity: 1; }
+    50%{ opacity: .5; }
+    100%{ opacity: 1; }
+}
 
 /* -------- 第四页 ------- */
 .bg-opensource .project-left .triangle { top: 65px; }

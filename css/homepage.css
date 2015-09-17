@@ -507,16 +507,86 @@ body {
 .enter {
   display: block;
   margin-top: 10px;
-  color: #384c76;
   text-align: right;
   text-decoration: underline;
 }
-.enter:hover {
+.enter a:hover {
   color: #dbc6cb;
 }
 .enter i {
   margin-left: 5px;
+}
+.enter a {
   font-size: 0.7em;
+  color: #384c76;
+}
+.click-guide {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 80px;
+  height: 50px;
+  background: transparent url("../images/click_me.png") no-repeat center;
+  -webkit-background-size: 80px 50px;
+  background-size: 80px 50px;
+  -webkit-animation: guide-shine 1.5s ease-in-out infinite;
+  -o-animation: guide-shine 1.5s ease-in-out infinite;
+  animation: guide-shine 1.5s ease-in-out infinite;
+}
+@-webkit-keyframes guide-shine {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes guide-shine {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes guide-shine {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes guide-shine {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes guide-shine {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /* -------- 第四页 ------- */
 .bg-opensource .project-left .triangle {
